@@ -48,7 +48,7 @@ html{
 	background-color: #D3D3D3;
 }
 #callToAction img{
-	width:60%;
+	max-width:60%;
 }
 #callToActionAside{
 	padding-left: 40px;
@@ -77,3 +77,37 @@ html{
 p.button{
 	font-size: 2rem;
 }
+/* #about styles */
+#about{
+	display:flex;
+}
+#about img{
+	max-width:60%;
+	padding:32px 24px;
+}
+#aboutMain h2{
+	color: 434343;
+	font-size: 3rem;
+	margin-top: 32px;
+	margin-bottom:24px;
+}
+#aboutMain p{
+	max-width: 60%;
+}
+#aboutAside{
+	width:423px;
+}
+.aboutInfo{
+	display:flex;
+}
+.aboutInfo img{
+	width:35%;
+}
+.aboutInfo div{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+}
+/*#aboutAside{
+	display:none;
+}*/
