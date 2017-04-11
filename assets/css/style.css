@@ -1,0 +1,79 @@
+/*Global Styles */
+html{
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* #mainHeader styles */
+
+#mainHeader{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	color:#434343;
+	height:64px;
+	padding-left:24px;
+	padding-right:24px;
+	font-size: 1.5rem;
+
+}
+.logoContainer{
+	display:flex;
+	align-items: center;
+}
+.logoContainer img{
+	width:3rem;
+}
+.logoContainer p{
+	font-weight: 700
+}
+#mainHeader span{
+	color:#929292;
+}
+#mainNav ul{
+	display:flex;
+}
+#mainNav ul li a{
+	text-decoration: none;
+	color:#434343;
+}
+#mainNav ul>li:not(:last-child) a{
+	padding-right:16px;
+}
+
+/* #callToAction Styles */
+#callToAction{
+	display:flex;
+	padding:32px 0px 32px 24px;
+	background-color: #D3D3D3;
+}
+#callToAction img{
+	width:60%;
+}
+#callToActionAside{
+	padding-left: 40px;
+	display:flex;
+	justify-content: center;
+	flex-direction: column;
+	color:#434343;
+}
+#callToActionAside h1{
+	font-size: 5rem;
+	font-weight: 700;
+}
+#callToActionAside p{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-size: 3rem;
+}
+.button{
+	background-color:#434343;
+	color:#fff;
+	padding-top:8px;
+	padding-bottom:8px;
+	text-align: center;
+	max-width:45rem;
+}
+p.button{
+	font-size: 2rem;
+}
