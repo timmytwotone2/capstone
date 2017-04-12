@@ -81,32 +81,68 @@ p.button{
 #about{
 	display:flex;
 }
-#about img{
-	max-width:60%;
+#aboutMain{
 	padding:32px 24px;
+	width:60%;
+}
+#aboutMain img{
+	min-width:60%;
 }
 #aboutMain h2{
-	color: 434343;
-	font-size: 3rem;
+	color: #434343;
+	font-weight:700;
+	font-size: 3.5rem;
 	margin-top: 32px;
 	margin-bottom:24px;
 }
 #aboutMain p{
-	max-width: 60%;
+	/*max-width: 60%;*/
+	font-size: 1.8rem;
+	line-height: 2rem;
+	margin-bottom: 4rem;
+}
+#aboutMain cite{
+	margin-top: 4rem;
+	font-size: 1.5rem;
 }
 #aboutAside{
-	width:423px;
+	/*width:423px;*/
+	padding-top:32px;
+	border-left:1px solid #D3D3D3;
 }
 .aboutInfo{
 	display:flex;
+	border-bottom: 1px solid #D3D3D3;
+}
+.gray{
+	background-color: #D3D3D3;
 }
 .aboutInfo img{
-	width:35%;
+	/*width:35%;*/
+	height:auto;
+	margin:16px;
 }
 .aboutInfo div{
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
+}
+.aboutInfoContent h4{
+	font-size: 2.5rem;
+	font-weight: 700;
+	color:#434343;
+	margin-top: -2rem;
+	margin-bottom: 1rem;
+}
+.aboutInfoContent p{
+	font-size:1.5rem;
+
+}
+.aboutInfoContent a{
+	font-size: 1.5rem;
+	color:#4B88DC;
+	text-decoration: none;
+	margin-top: 4rem;
 }
 /*#aboutAside{
 	display:none;
