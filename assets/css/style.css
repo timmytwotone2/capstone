@@ -4,6 +4,16 @@ html{
 	font-family: 'Open Sans', sans-serif;
 }
 
+.media-container {
+  overflow: hidden;
+}
+
+.media-container img,
+.media-container video {
+  display: block;
+  width: 100%;
+}
+
 /* #mainHeader styles */
 
 #mainHeader{
@@ -15,8 +25,8 @@ html{
 	padding-left:24px;
 	padding-right:24px;
 	font-size: 1.5rem;
-
 }
+
 .logoContainer{
 	display:flex;
 	align-items: center;
@@ -54,20 +64,26 @@ html{
 	display:flex;
 	padding:32px 0px 32px 24px;
 	background-color: #D3D3D3;
-	width:60%;
-	
+	/*width:60%;*/
 }
+
+.ctaleft {
+	width:60%;
+}
+
 #callToAction img{
 	width:100%;
 	height:auto;
 	display:block;
 }
+
 #callToActionAside{
 	padding-left: 40px;
 	display:flex;
 	justify-content: center;
 	flex-direction: column;
 	color:#434343;
+	width:40%;
 }
 #callToActionAside h1{
 	font-size: 5rem;
@@ -78,6 +94,7 @@ html{
 	margin-bottom: 40px;
 	font-size: 3rem;
 }
+
 .button{
 	background-color:#434343;
 	color:#fff;
@@ -117,34 +134,51 @@ p.button{
 	margin-top: 4rem;
 	font-size: 1.5rem;
 }
+
+
 #aboutAside{
 	/*width:423px;*/
-	width:40%;
-	padding-top:32px;
+	/*width:40%;
+	padding-top:32px;*/
 	border-left:1px solid #D3D3D3;
-}
-.aboutInfo{
 	display:flex;
-	border-bottom: 1px solid #D3D3D3;
+	flex-direction: column;
+	justify-content: space-between;
+	 width: 40%;
+  padding: 2rem 0;
 }
 .gray{
 	background-color: #D3D3D3;
 }
-.aboutInfo img{
-	/*width:35%;*/
-	height:auto;
-	margin:16px;
+
+.aboutInfo  { 
+	display: flex;
+  padding: 1rem 0 1rem 1rem;
+  border-bottom: 1px solid rgb(245, 245, 245);
 }
-.aboutInfo div{
-	display:flex;
-	flex-direction: column;
-	justify-content: center;
+
+.aboutInfo .mobile {
+  display: none;
 }
+
+.aboutInfo .media-container {
+	width: 35%;
+}
+
+.aboutInfo .aboutInfoContent {
+	display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65%;
+  padding: 0 0.75rem 0 1rem;
+}
+
 .aboutInfoContent h4{
 	font-size: 2.5rem;
+	/*font-size: 1.25rem;*/
 	font-weight: 700;
 	color:#434343;
-	margin-top: -2rem;
+	/*margin-top: -2rem;*/
 	margin-bottom: 1rem;
 }
 .aboutInfoContent p{
@@ -155,7 +189,7 @@ p.button{
 	font-size: 1.5rem;
 	color:#4B88DC;
 	text-decoration: none;
-	margin-top: 4rem;
+	margin-top: 2rem;
 }
 /* flex-grid-container styles */
 #flex-grid-container{
@@ -173,6 +207,9 @@ p.button{
 	display:flex;
 	flex-wrap:wrap;
 	justify-content: center;
+}
+.flex-grid-mobile{
+	display:none;
 }
 .flex-grid .col{
 	/*height:220px;*/
@@ -292,16 +329,33 @@ p.button{
 }
 /* Mobile Styles */
 @media only screen and (max-width: 1024px){
+
 #mainHeader{
 	display: none;
 }
-#mobileHeader{
+#mobileHeader {
 	display:block;
+	width: 100%;
+	padding: 2rem .5rem .5rem .5rem;
+	/*height:64px;*/
 }
+
+#mobileHeader nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
 #callToAction{
 	display:block;
 	width:100%;
 	padding:0;
+}
+.ctaleft{
+	width:100%;
+}
+#callToActionAside{
+	width:100%;
 }
 #callToAction h1{
 	padding-top: 32px;
@@ -310,6 +364,9 @@ p.button{
 #callToAction p{
 	padding-bottom: 24px;
 }
+p.button{
+	background-color:#929292;
+}
 .button{
 	padding-bottom:32px;
 }
@@ -317,12 +374,76 @@ p.button{
 	display:none;
 }
 #aboutAside{
-	width:100%;
-}
-#aboutAside img{
-	width:90%;
-	height:20%;
-}
+
+    width: 100%;
+  }
+
+  .aboutInfo .media-container {
+    width: 100%;
+  }
 .aboutInfo{
 	display:block;
+}
+.aboutInfoContent h4{
+	margin-top: 2rem;
+}
+
+.aboutInfo .desktop {
+    display: none;
+  }
+  .aboutInfo{
+   border-bottom: 0px solid rgb(245, 245, 245);
+}
+.gray{
+	background-color: transparent;
+	border-bottom:1px solid rgb(245,245,245);
+}
+  .aboutInfo .mobile {
+    display: block;
+  }
+  #flex-grid-container{
+  	background-color:#fff;
+  }
+  .flex-grid{
+  	display:none;
+  }
+  .flex-grid-mobile{
+  	display:block;
+  	padding-bottom: 32px;
+  	border-bottom:1px solid rgb(245,245,245);
+  }
+  .flex-grid-mobile nav ul{
+  	display:flex;
+  	flex-direction: column;
+  	align-items: center;
+  }
+  .flex-grid-mobile nav ul li{
+  	background-color:#D3D3D3;
+  	line-height: 3rem;
+  	margin-bottom: 8px;
+  	padding:16px;
+  	width:95%;
+  }
+  .flex-grid-mobile nav ul li a{
+  	text-decoration: none;
+  	color:#434343;
+  	font-size: 3rem;
+  }
+  #thesisMain{
+  	width:100%;
+  }
+  #thesisAside{
+  	display:none;
+  }
+  #urbanQuote{
+  	display:none;
+  }
+  #footerNav{
+  	display:none;
+  }
+  .footerBrand p{
+  	margin-top:24px;
+  	padding-top:16px;
+  	padding-bottom:16px;
+  }
 }
